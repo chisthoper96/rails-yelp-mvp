@@ -1,7 +1,11 @@
-
-<%= simple_form_for(restaurant) do |f| %>
+<div class="container mt-5">
+<h1 class="d-flex justify-content-center">Creacion de un nuevo restaurant</h1>
+<%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :rating %>
+  <%= f.input :phone_number %>
+  <%= f.input :category %>
   <%= f.submit %>
 <% end %>
+<%= link_to "volver", restaurants_path %>
+</div>
