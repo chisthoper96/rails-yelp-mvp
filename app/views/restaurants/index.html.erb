@@ -1,1 +1,10 @@
-<h1 class="p-2 m-2">Todos los restaurants</h1>
+<h1 class="p-2 m-2 ">Todos los restaurants</h1>
+
+  <% @restaurants.each do |restaurant| %>
+    <div class="card m-3 d-flex" style="width: 18rem;">
+      <p class="m-0">Restaurante: <%=restaurant.name %> </p>
+      <p class="m-0">Categoria: <%=restaurant.category %> </p>
+      <%= link_to "Ver detalle", restaurant_path(restaurant) %>
+    </div>
+  <% end %>
+
